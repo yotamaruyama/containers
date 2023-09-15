@@ -6,8 +6,8 @@ services:
   db:
     container_name: postgres
     build:
-      context: ./containers/postgres
-      dockerfile: containers/postgres/Dockerfile
+      context: .
+      dockerfile: postgres/Dockerfile
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
@@ -25,7 +25,7 @@ services:
     container_name: app
     build:
       context: .
-      dockerfile: containers/django/Dockerfile
+      dockerfile: django/Dockerfile
     volumes:
       - .:/code
       - ./static:/static
@@ -47,7 +47,7 @@ services:
     build:
       # ビルドコンテキストはカレントディレクトリ
       context: .
-      dockerfile: containers/nginx/Dockerfile
+      dockerfile: nginx/Dockerfile
     # ボリュームを指定
     # ローカルの/staticをコンテナの/staticにマウントする
     volumes:
