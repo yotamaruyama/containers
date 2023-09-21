@@ -14,5 +14,5 @@ RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 # ソースコードをコンテナにコピー
 COPY . /code/
-COPY ./django/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ./containers/django/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
