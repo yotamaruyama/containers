@@ -8,6 +8,6 @@ if [ $DEBUG = 1 ]; then
     python manage.py runserver 0.0.0.0:8000
 else
     # gunicornを起動させる時はプロジェクト名を指定します
-    # 今回はdjangopjにします
-    gunicorn djangopj.wsgi:application --bind 0.0.0.0:8000
+    # 今回はT2にします
+    gunicorn T2.wsgi:application --bind 0.0.0.0:8000
 fi

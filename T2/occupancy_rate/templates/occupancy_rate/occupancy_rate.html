@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Operational Rate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="{% static 'js/my_script.js' %}"></script> <!-- 追加 -->
+</head>
+<body>
+
+<h1>Machine Operational Rate</h1>
+
+<select id="time_scale" title="Select Time Scale">
+    <option value="hour">Hour</option>
+    <option value="day">Day</option>
+    <option value="month">Month</option>
+</select>
+
+<canvas id="myChart" width="400" height="200"></canvas>
+
+</body>
+</html>
